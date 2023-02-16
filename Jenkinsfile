@@ -8,8 +8,8 @@ pipeline{
 			}
 			post{
 				success{
-					echo "Archiving the artufacts"
-					archiveArtifacts artifacts: '**/target/*.war'
+					echo "Archiving the artifacts"
+					archiveArtifacts artifacts: '/opt/apache-tomcat-8.5.85/webapps'
 				}
 			}
 		}
