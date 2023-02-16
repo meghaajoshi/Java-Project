@@ -11,7 +11,7 @@ pipeline{
 			post{
 				success{
 					echo "Archiving the artifacts"
-					archiveArtifacts artifacts: '/webapps/.war'
+					archiveArtifacts artifacts: '/opt/apache-tomcat-8.5.85/webapps'
 				}
 			}
 		}
