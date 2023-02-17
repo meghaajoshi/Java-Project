@@ -8,8 +8,8 @@ pipeline{
 				post{
 					success{
 					     echo "archiving the artifacts"
-					     execCommand: "cp target/my-webapp.war tomcat/webapps",
-                			     remoteDirectory: "/opt/tomcat"
+					     archiveArtifacts artifacts: 'tomcat/webapps'
+                			     remoteDirectory: '/opt/tomcat'
 						
 					}
 				}
