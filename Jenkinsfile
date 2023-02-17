@@ -8,13 +8,13 @@ pipeline{
 			post{
 				success{
 					echo "Archiving the artifacts"
-					archiveArtifacts artifacts: '**/target/*.jar'
+					archiveArtifacts artifacts: '**/target/*.war'
 				}
 			}
 		}
 		stage ('Deploy to tomcat server'){
 			steps{
-				deploy adapters: [tomcat8(path: '', url: 'http://52.86.122.58:8090/')], contextPath: null, war: '**/*.jar'
+				deploy adapters: [tomcat8(path: '', url: 'http://52.86.122.58:8090/')], contextPath: null, war: '**/*.war'
 			}
 		}
 	}
