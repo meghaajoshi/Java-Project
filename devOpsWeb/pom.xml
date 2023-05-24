@@ -43,6 +43,7 @@
         </plugins>
     </build>
     
+	<!-- DEMO -->
     <profiles>
         <profile>
             <id>myfaces</id>
